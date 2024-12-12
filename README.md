@@ -42,6 +42,19 @@ This repository contains a Python-based Binance RSI Scanner that fetches trading
 
 ---
 
+## **Usage with Docker**
+1. **Build the Docker image:**
+   ```bash
+   docker build -t rsi-binance .
+   ```
+
+2. **Run the scanner using Docker:**
+   ```bash
+   docker run --rm -v "$(pwd):/app" --name rsi-binance-container rsi-binance python /app/main.py
+   ```
+
+---
+
 ## **Environment Variables**
 - `SYMBOL` - (Optional) Specific coin to query (e.g., `BTCUSDT`).
 - `MAX_WORKERS` - Number of threads for parallel processing (default: `40`).
